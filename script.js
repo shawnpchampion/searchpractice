@@ -63,7 +63,7 @@ fetch("./assets/location-data.json")
             animate: true,
             duration: 2 // in seconds
                 });
-                changeStory('story', data[i].description); 
+                changeStory('story', `<h3> ${data[i].title} </h3> <p> ${data[i].description} </p>`); 
                 
 	    })
 	    .addTo(map);
