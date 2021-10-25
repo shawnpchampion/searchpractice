@@ -38,7 +38,7 @@ fetch("./assets/location-data.json")
             let option = document.createElement("option");
             option.value = i+1;
             option.text = data[i].title;
-            document.querySelector(".select-dropdown").appendChild(option);
+   //         document.querySelector(".select-dropdown").appendChild(option);
 
             let marker = L.marker([data[i].latitude, data[i].longitude], {icon: ourCustomIcon}).bindPopup(`<h3> ${data[i].title} </h3> <p> ${data[i].description} </p>`).on('click', () => {
                 map.flyTo([data[i].latitude, data[i].longitude], data[i].zoomLevel, {
@@ -51,19 +51,19 @@ fetch("./assets/location-data.json")
     })
     .catch(error => alert(error))
 
-document.querySelector(".map-zoom-out-btn").addEventListener('click', () => {
-    map.flyTo([19.40746666, -154.9114795], 15);	
-});
+//document.querySelector(".map-zoom-out-btn").addEventListener('click', () => {
+//    map.flyTo([19.40746666, -154.9114795], 15);	
+//});
 
-document.querySelector(".search-btn").addEventListener('click', () => {
-    let select = document.querySelector(".select-dropdown");
-    let value = select.options[select.selectedIndex].value;
-    map.flyTo([ourData[value-1].latitude, ourData[value-1].longitude], ourData[value-1].zoomLevel, {
-            animate: true,
-            duration: 2 // in seconds
-                }
+//document.querySelector(".search-btn").addEventListener('click', () => {
+//    let select = document.querySelector(".select-dropdown");
+//    let value = select.options[select.selectedIndex].value;
+//    map.flyTo([ourData[value-1].latitude, ourData[value-1].longitude], ourData[value-1].zoomLevel, {
+//            animate: true,
+//            duration: 2 // in seconds
+//                }
              
-             );
+//             );
 });
 
 
