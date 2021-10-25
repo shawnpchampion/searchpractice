@@ -6,13 +6,23 @@ window.onload = function() {
 	alert(num); //	 Show start story when page has loaded
 };
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors',
-    maxZoom: 20,
-    minZoom: 2,
-    tileSize: 512,
-    zoomOffset: -1
-}).addTo(map);
+//var OSM = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+//            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+//            maxZoom: 18
+//        });
+		
+var roads = L.gridLayer
+	.googleMutant({
+		type: "satellite", // valid values are 'roadmap', 'satellite', 'terrain' and 'hybrid'
+	}).addTo(map);
+
+//L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//    attribution: '&copy; OpenStreetMap contributors',
+//    maxZoom: 20,
+//    minZoom: 2,
+//    tileSize: 512,
+//    zoomOffset: -1
+//}).addTo(map);
 
 let iconOption = {
     iconUrl: './assets/location-marker.svg',
