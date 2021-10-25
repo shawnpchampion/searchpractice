@@ -107,6 +107,7 @@ var rewind = document.getElementById('rewind'); // A separate function for stepp
 rewind.onclick = function() {
     try {	
 	num -= 1;
+	alert(num);    
 	changeStory('story', storyText[num]); // change the story (function)
     } catch(err) { // If it was the first story do the same, but show the start story again.
 	num = -1,
