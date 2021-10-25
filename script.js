@@ -108,11 +108,10 @@ rewind.onclick = function() {
     try {	
 	num -= 1;
 	alert(num); 
-	if(num < -1) throw "too high";    
+	num < -1;    
 	changeStory('story', storyText[num]); // change the story (function)
     } catch(err) { // If it was the first story do the same, but show the start story again.
-	num = -1,
-	alert(err);	
+	num = -1,	
 	changeStory('story', startText);
     }
 };
@@ -124,7 +123,8 @@ var forward = document.getElementById('forward');
 forward.onclick = function() {
    try {
 	num += 1;
-	alert(num);   
+	alert(num);  
+	num > 2;   
 	changeStory('story', storyText[num]); // change the story (function)
    } catch(err) { // If this was the last story do the same, but show the start styry and start again.
 	fadeOut(document.getElementById('story')),
