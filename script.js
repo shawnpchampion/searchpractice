@@ -111,11 +111,7 @@ rewind.onclick = function() {
 	changeStory('story', storyText[num]); // change the story (function)
     } catch(err) { // If it was the first story do the same, but show the start story again.
 	num = -1,
-//	positions.clearLayers(),
-	changeStory('story', startText),
-	setTimeout(function() {
-		map.setZoom(16)
-	}, 2 * 1000);
+	changeStory('story', startText);
     }
 };
 
@@ -131,10 +127,7 @@ forward.onclick = function() {
    } catch(err) { // If this was the last story do the same, but show the start styry and start again.
 	fadeOut(document.getElementById('story')),
 	num = -1,
-	changeStory('story', startText),
-	setTimeout(function() {
-		map.setZoom(16)
-	}, 2 * 1000);
+	changeStory('story', startText);
    }
 };
 
