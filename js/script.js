@@ -37,7 +37,7 @@ fetch("./assets/location-data.json")
     .catch(error => alert(error))
 
 document.querySelector(".map-zoom-out-btn").addEventListener('click', () => {
-    map.flyTo([19.40746666,	-154.9114795], 5);
+    map.flyTo([19.40746666,	-154.9114795], 15);
 });
 
 document.querySelector(".search-btn").addEventListener('click', () => {
