@@ -58,6 +58,9 @@ body {
 		z-index:1;
         bottom: 0;
 	overflow:auto;
+	background-image: url(img/banback.png);
+        background-repeat: no-repeat;
+        background-size: contain;
 	}
 
 .button-group {
