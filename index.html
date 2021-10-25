@@ -13,6 +13,7 @@
 </head>
 <body>
 <!--    <h2 class="heading"> Some Indian Monuments </h2> -->
+    <div id="story"></div>   
     <div id="mymap"> </div>
     <div class="button-group flex-style">
         <div class="component1">
@@ -28,5 +29,62 @@
 <!--    <footer class="footer flex-style"> Made Using Leaflet JS | <a href="" target="_blank"> Source Code</a> <a href="" target="_blank"> <img src="assets/github-icon.png" /> </a> </footer> -->
 
     <script type="text/javascript" src="js/script.js"></script>
+    
+    <script>
+//	var baseMap = "osm"; // valid options "osm", "toner", "terrain", "watercolor", "mapbox" (requires 'username.mapid' in storymap.js)
+//	var startCoordinate = [57.66818, 14.97132]; // Change this to your own start position (lat/long)
+//	var startCoordinate = [19.40923489, -154.9137905]; // Change this to your own start position (lat/long)	
+//	var startZoom = 18; // Change this to you desired start zoom level
+//	var titleOpacity = 0.6; // Set the opacity for the title element
+	var storyOpacity = 0.75; // Set the opacity for the story element
+	var panTime = 2; // Set the time (seconds) for panning the map
+//	var titleTextColor = "#101010"; // The main title text color
+//	var titleBackground = "#D5D5D5"; // The main title background color
+	var storyTextColor = "#101010"; // Story text color
+	var storyBackground = "#EEEEEE"; // Story background color
+</script>
+
+<!-- This is where the story begins! -->
+<script>
+
+var startText = "<h1>Start Page</h1><></div><br><br>This is the <b>HTML</b> text for the first story text.<i>Click in the map to advance the story.</i>";
+
+// position is a list with all story positions, except the start position.
+var position = [
+
+//	[56.02856, 14.14713], // first position
+//	[58.02575, 14.46584],
+//	[57.66695, 14.97063]
+
+//[19.40956456, -154.9139812],
+//[19.40851575, -154.9126613],
+//[19.40998394, -154.9142794]
+//];
+
+
+
+// bubbleText is a list with the content of the pop-ups for each marker.
+// The showPopUp variable dictates if the pop-ups will be shown as default
+//var showPopUp = false;
+//var useMarker = true; //disable the use of markers
+//var bubbleText = [
+//	"Naturrum<br><a href='http://www.vattenriket.kristianstad.se/naturum/'>Visit web page</a>", // first pop-up
+//	"Gränna",
+//	"Eksjö<br><img src='http://www.visiteksjo.se/wp-content/uploads/2013/11/vattentorn-300x158.jpg'>"
+//];
+
+// storyText is a list with the story content.
+// it's important to match position, bubbleText and storyText in the correct order.
+var storyText = [
+	"<H1>Naturrum - Kristianstad</H1><img src='http://www.vattenriket.kristianstad.se/naturum/bilder/index_maj2.jpg'><br><br>The picture is borrowed from the Naturrum webb page, pay it a visit.<br><br><a href='http://www.vattenriket.kristianstad.se/naturum/'>Web page</a>", // first story HTML
+
+	"<h1>Gränna - Visingsö</h1><img src='http://destinationjonkoping.se/images/200.7c2c3c8e12c81fff89e80001222/Polkagrisar_Jonkoping.jpg'><br><br>The photo is borrowed from <a href='http://destinationjonkoping.se/grannavisingso/gora/polkagrisar.html'>Destination Jönköping</a>.<br><br>There's a bit more than <i>polkagrisar</i> in Gränna, but there are a <u>lot</u> of candy factories!<br><ul><li>Gränna Museum</li><li>Braehus Castle</li><li>BP-macken</li><li>Bicycle riding on Visingsö</li><li>Polar Centre</li><li>André museum</li><li>Golf</li><li>Äppenvikens Adventure Park</li><li>etc...</li></ul>",
+
+	"<h1>Eksjö</h1><img src='http://www.visiteksjo.se/wp-content/uploads/2014/05/affisch_v%C3%A5rfest_2014_huvud-2.jpg'><br><br>Every Saturday all summer there's a marching band and parade. You can also find a lot of exciting events all year around. Find out more on <a href='http://www.visiteksjo.se'>Visit Eksjö</a>."
+
+];
+
+
+</script>
 </body>
 </html>
