@@ -1,4 +1,4 @@
-let map = L.map('mymap').setView([19.40746666, -154.9114795], 5);
+let map = L.map('mymap').setView([19.40746666, -154.9114795], 16);
 let ourData = [];
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -26,7 +26,11 @@ fetch("./assets/location-data.json")
             document.querySelector(".select-dropdown").appendChild(option);
 
             let marker = L.marker([data[i].latitude, data[i].longitude], {icon: ourCustomIcon}).bindPopup(`<h3> ${data[i].title} </h3> <p> ${data[i].description} </p>`).on('click', () => {
-                map.flyTo([data[i].latitude, data[i].longitude], data[i].zoomLevel);
+                map.flyTo([data[i].latitude, data[i].longitude], data[i].zoomLevel, {
+            animate: true,
+            duration: 2 // in seconds
+                }
+                         );
             }).addTo(map);
         }
     })
@@ -39,5 +43,10 @@ document.querySelector(".map-zoom-out-btn").addEventListener('click', () => {
 document.querySelector(".search-btn").addEventListener('click', () => {
     let select = document.querySelector(".select-dropdown");
     let value = select.options[select.selectedIndex].value;
-    map.flyTo([ourData[value-1].latitude, ourData[value-1].longitude], ourData[value-1].zoomLevel);
+    map.flyTo([ourData[value-1].latitude, ourData[value-1].longitude], ourData[value-1].zoomLevel, {
+            animate: true,
+            duration: 2 // in seconds
+                }
+             
+             );
 });
