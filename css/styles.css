@@ -64,6 +64,7 @@ body {
     justify-content: space-evenly !important;
 	position:absolute;
 	bottom:0;
+	right: 50%;
 	z-index:2;
 }
 .map-zoom-out-btn, .search-btn {
