@@ -6,23 +6,40 @@ window.onload = function() {
 	alert(num); //	 Show start story when page has loaded
 };
 
-//var OSM = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-//            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-//            maxZoom: 18
-//        });
+var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
+  maxZoom: 20,
+  subdomains:['mt0','mt1','mt2','mt3']
+  });
+
+
+
+$("#sat-map-btn").click(function(event) {
+map.addLayer(googleSat);
+});
+
+
+$("#street-map-btn").click(function() {
+// if (map.hasLayer(googleSat)) {
+    	map.removeLayer(googleSat);
+});
 		
 //var roads = L.gridLayer
 //	.googleMutant({
 //		type: "satellite", // valid values are 'roadmap', 'satellite', 'terrain' and 'hybrid'
 //	}).addTo(map);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors',
-    maxZoom: 20,
-    minZoom: 2,
-    tileSize: 512,
-    zoomOffset: -1
-}).addTo(map);
+var cartoLight = L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png", {
+  maxZoom: 19,
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions">CartoDB</a>'
+  }).addTo(map);
+
+//L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//    attribution: '&copy; OpenStreetMap contributors',
+//    maxZoom: 20,
+//    minZoom: 2,
+//    tileSize: 512,
+//    zoomOffset: -1
+//}).addTo(map);
 
 let iconOption = {
     iconUrl: './assets/location-marker.svg',
