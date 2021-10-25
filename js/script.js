@@ -1,4 +1,4 @@
-let map = L.map('mymap').setView([19.5937, 78.9629], 5);
+let map = L.map('mymap').setView([19.40746666, -154.9114795], 5);
 let ourData = [];
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -33,7 +33,7 @@ fetch("./assets/location-data.json")
     .catch(error => alert(error))
 
 document.querySelector(".map-zoom-out-btn").addEventListener('click', () => {
-    map.flyTo([19.5937, 78.9629], 5);
+    map.flyTo([19.40746666,	-154.9114795], 5);
 });
 
 document.querySelector(".search-btn").addEventListener('click', () => {
