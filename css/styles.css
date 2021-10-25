@@ -47,9 +47,11 @@ body {
         bottom: 0;
 	overflow:auto;
 	}
+
 .button-group {
     justify-content: space-evenly !important;
 	position:absolute;
+	bottom:0;
 	z-index:2;
 }
 .map-zoom-out-btn, .search-btn {
