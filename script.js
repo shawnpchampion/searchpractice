@@ -64,7 +64,7 @@ fetch("./assets/location-data.json")
 //                }
              
 //             );
-});
+//});
 
 
 // Javascript to create a storymap by Klas Karlsson 2014-05-29
