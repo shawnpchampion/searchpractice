@@ -36,9 +36,9 @@ fetch("./assets/location-data.json")
     })
     .catch(error => alert(error))
 
-document.querySelector(".map-zoom-out-btn").addEventListener('click', () => {
-    map.flyTo([19.40746666,	-154.9114795], 15);
-});
+//document.querySelector(".map-zoom-out-btn").addEventListener('click', () => {
+//    map.flyTo([19.40746666, -154.9114795], 15);	
+//});
 
 document.querySelector(".search-btn").addEventListener('click', () => {
     let select = document.querySelector(".select-dropdown");
@@ -130,7 +130,13 @@ rewind.onclick = function() {
     }
 };
 
-map.on('click', function() { // Function to forward the story when clicking in the map
+
+//document.querySelector(".map-zoom-out-btn").addEventListener('click', () => {
+//    map.flyTo([19.40746666, -154.9114795], 15);	
+//});
+
+var forward = document.getElementById('forward'); // A separate function for stepping backwards in the story
+forward.onclick = function() {
    try {
 	num += 1;
 //	positions.clearLayers(); // Remove any markers
