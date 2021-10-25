@@ -13,15 +13,14 @@ var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
 
 
 
-$("#sat-map-btn").click(function(event) {
-map.addLayer(googleSat);
-});
+//$("#sat-map-btn").click(function(event) {
+//map.addLayer(googleSat);
+//});
 
 
-$("#street-map-btn").click(function() {
-// if (map.hasLayer(googleSat)) {
-    	map.removeLayer(googleSat);
-});
+//$("#street-map-btn").click(function() {
+//    	map.removeLayer(googleSat);
+//});
 		
 //var roads = L.gridLayer
 //	.googleMutant({
