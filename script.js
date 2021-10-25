@@ -56,13 +56,17 @@ fetch("./assets/location-data.json")
             option.text = data[i].title;
    //         document.querySelector(".select-dropdown").appendChild(option);
 
-            let marker = L.marker([data[i].latitude, data[i].longitude]).bindPopup(`<h3> ${data[i].title} </h3> <p> ${data[i].description} </p>`).on('click', () => {
+            let marker = L.marker([data[i].latitude, data[i].longitude])
+	    .bindPopup(`<h3> ${data[i].title} </h3> <p> ${data[i].description} </p>`)
+	    .on('click', () => {
                 map.flyTo([data[i].latitude, data[i].longitude], data[i].zoomLevel, {
             animate: true,
             duration: 2 // in seconds
-                }
-                         );
-            }).addTo(map);
+                });
+                changeStory('story', data[i].title); 
+                
+	    })
+	    .addTo(map);
         }
     })
     .catch(error => alert(error))
@@ -124,6 +128,7 @@ for (var i = 0; 1<links.length; i++) {
 	links[i].style.color = storyTextColor;
 };
 document.getElementById('rewind').style.color = storyTextColor;
+document.getElementById('forward').style.color = storyTextColor;
 
 
 var num = -1;
