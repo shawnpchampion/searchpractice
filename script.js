@@ -1,6 +1,11 @@
 let map = L.map('mymap').setView([19.40746666, -154.9114795], 16);
 let ourData = [];
 
+window.onload = function() {
+	changeStory('story', startText);
+	alert(num); //	 Show start story when page has loaded
+};
+
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors',
     maxZoom: 20,
@@ -97,10 +102,6 @@ document.getElementById('rewind').style.color = storyTextColor;
 
 
 var num = -1;
-
-window.onload = function() {
-	changeStory('story', startText); //	 Show start story when page has loaded
-};
 
 var rewind = document.getElementById('rewind'); // A separate function for stepping backwards in the story
 rewind.onclick = function() {
