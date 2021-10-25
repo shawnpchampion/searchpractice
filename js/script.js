@@ -76,11 +76,7 @@ function fadeIn(element) {
 }
 function changeStory(id, content) {
 	fadeOut(document.getElementById(id)), // Fade out function
-//	map.panTo(position, { // Pan map to new location
-//        map.flyTo(position, 18, { // Pan map to new location
-//		animate:true,
-//		duration:panTime
-//	}),
+
 	setTimeout(function() { // Wait for a number of miliseconds and then fade in the new story.
 		document.getElementById(id).innerHTML = content
 		fadeIn(document.getElementById(id))
@@ -112,13 +108,6 @@ rewind.onclick = function() {
     try {	
 	num -= 1;
 //	positions.clearLayers(); // Remove any markers
-//	if (useMarker) {
-//	if (showPopUp) { // Add new marker and pop-up visible or not
-//		L.marker(position[num]).addTo(positions).bindPopup(bubbleText[num]).openPopup();
-//	} else {
-//		L.marker(position[num]).addTo(positions).bindPopup(bubbleText[num]);
-//	};
-//	};
 	changeStory('story', storyText[num]); // change the story (function)
     } catch(err) { // If it was the first story do the same, but show the start story again.
 	num = -1,
@@ -134,13 +123,6 @@ map.on('click', function() { // Function to forward the story when clicking in t
    try {
 	num += 1;
 //	positions.clearLayers(); // Remove any markers
-//	if (useMarker) {
-//	if (showPopUp) { // Add new marker and pop-up visible or not
-//		L.marker(position[num]).addTo(positions).bindPopup(bubbleText[num]).openPopup();
-//	} else {
-//		L.marker(position[num]).addTo(positions).bindPopup(bubbleText[num]);
-//	};
-//	};
 	changeStory('story', storyText[num]); // change the story (function)
    } catch(err) { // If this was the last story do the same, but show the start styry and start again.
 	fadeOut(document.getElementById('story')),
