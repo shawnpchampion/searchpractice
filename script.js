@@ -107,10 +107,12 @@ var rewind = document.getElementById('rewind'); // A separate function for stepp
 rewind.onclick = function() {
     try {	
 	num -= 1;
-	alert(num);    
+	alert(num); 
+	if(num < -1) throw "too high";    
 	changeStory('story', storyText[num]); // change the story (function)
     } catch(err) { // If it was the first story do the same, but show the start story again.
 	num = -1,
+	alert(err);	
 	changeStory('story', startText);
     }
 };
