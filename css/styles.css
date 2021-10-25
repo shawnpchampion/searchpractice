@@ -28,6 +28,7 @@ body {
 	}
 .button-group {
     justify-content: space-evenly !important;
+	z-index:2;
 }
 .map-zoom-out-btn, .search-btn {
     background-color: #0072B5;
