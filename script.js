@@ -36,9 +36,9 @@ fetch("./assets/location-data.json")
     })
     .catch(error => alert(error))
 
-//document.querySelector(".map-zoom-out-btn").addEventListener('click', () => {
-//    map.flyTo([19.40746666, -154.9114795], 15);	
-//});
+document.querySelector(".map-zoom-out-btn").addEventListener('click', () => {
+    map.flyTo([19.40746666, -154.9114795], 15);	
+});
 
 document.querySelector(".search-btn").addEventListener('click', () => {
     let select = document.querySelector(".select-dropdown");
@@ -131,33 +131,22 @@ rewind.onclick = function() {
 };
 
 
-//document.querySelector(".map-zoom-out-btn").addEventListener('click', () => {
-//    map.flyTo([19.40746666, -154.9114795], 15);	
-//});
 
-var forward = document.getElementById('forward'); // A separate function for stepping backwards in the story
+var forward = document.getElementById('forward'); 
+
 forward.onclick = function() {
    try {
 	num += 1;
-//	positions.clearLayers(); // Remove any markers
-//	if (useMarker) {
-//	if (showPopUp) { // Add new marker and pop-up visible or not
-//		L.marker(position[num]).addTo(positions).bindPopup(bubbleText[num]).openPopup();
-//	} else {
-//		L.marker(position[num]).addTo(positions).bindPopup(bubbleText[num]);
-//	};
-//	};
 	changeStory('story', storyText[num]); // change the story (function)
    } catch(err) { // If this was the last story do the same, but show the start styry and start again.
 	fadeOut(document.getElementById('story')),
 	num = -1,
-//	positions.clearLayers(),
 	changeStory('story', startText),
 	setTimeout(function() {
 		map.setZoom(16)
 	}, 2 * 1000);
    }
-});
+};
 
 
 
