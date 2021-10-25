@@ -108,7 +108,7 @@ rewind.onclick = function() {
     try {	
 	num -= 1;
 	alert(num); 
-	num < -1;    
+	if(num < -1) throw "too high";    
 	changeStory('story', storyText[num]); // change the story (function)
     } catch(err) { // If it was the first story do the same, but show the start story again.
 	num = -1,	
@@ -124,7 +124,7 @@ forward.onclick = function() {
    try {
 	num += 1;
 	alert(num);  
-	num > 2;   
+	if(num > 2) throw "too low";   
 	changeStory('story', storyText[num]); // change the story (function)
    } catch(err) { // If this was the last story do the same, but show the start styry and start again.
 	fadeOut(document.getElementById('story')),
