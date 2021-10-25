@@ -3,7 +3,7 @@ let ourData = [];
 
 window.onload = function() {
 	changeStory('story', startText);
-	alert(num); //	 Show start story when page has loaded
+//	alert(num); //	 Show start story when page has loaded
 };
 
 var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
@@ -118,7 +118,6 @@ function changeStory(id, content) {
 document.getElementById('story').style.opacity = storyOpacity; // Opacity for the story element
 document.getElementById('story').style.background = storyBackground;
 document.getElementById('story').style.color = storyTextColor;
-document.getElementById('story').style.background = storyBackground;
 var storyTag = document.getElementById('story');
 var links = storyTag.getElementsByTagName('a');
 for (var i = 0; 1<links.length; i++) {
@@ -133,7 +132,7 @@ var rewind = document.getElementById('rewind'); // A separate function for stepp
 rewind.onclick = function() {
     try {	
 	num -= 1;
-	alert(num); 
+//	alert(num); 
 	if(num < -1) throw "too high";    
 	changeStory('story', storyText[num]); // change the story (function)
     } catch(err) { // If it was the first story do the same, but show the start story again.
@@ -149,7 +148,7 @@ var forward = document.getElementById('forward');
 forward.onclick = function() {
    try {
 	num += 1;
-	alert(num);  
+//	alert(num);  
 	if(num > 2) throw "too low";   
 	changeStory('story', storyText[num]); // change the story (function)
    } catch(err) { // If this was the last story do the same, but show the start styry and start again.
