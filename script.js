@@ -1,4 +1,4 @@
-let map = L.map('mymap').setView([19.40746666, -154.9114795], 18);
+let map = L.map('mymap').setView([19.40923489, -154.9137905], 16); //  19.40746666, -154.9114795
 let ourData = [];
 
 window.onload = function() {
