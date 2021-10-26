@@ -114,14 +114,18 @@ function fadeIn(element) {
         op += 0.04; // this row and the next sets the speed of the fade-in
     }, 20);
 }
-function changeStory(id, content) {
+function changeStory(position, id, content) {
 	fadeOut(document.getElementById(id)), // Fade out function
 	setTimeout(function() { // Wait for a number of miliseconds and then fade in the new story.
+		 map.flyTo(position, 18, { // Pan map to new location
+		animate:true,
+		duration:panTime
 		document.getElementById(id).innerHTML = content
 		fadeIn(document.getElementById(id))
 	}, 650);
 	
 }
+var positions = L.layerGroup([]); // This group layer holds dynamically created markers
 
 
 document.getElementById('story').style.opacity = storyOpacity; // Opacity for the story element
@@ -144,10 +148,13 @@ rewind.onclick = function() {
 	num -= 1;
 //	alert(num); 
 	if(num < -1) throw "too high";    
-	changeStory('story', storyText[num]); // change the story (function)
+	changeStory(position[num],'story', storyText[num]); // change the story (function)
     } catch(err) { // If it was the first story do the same, but show the start story again.
 	num = -1,	
-	changeStory('story', startText);
+	changeStory(startCoordinate, 'story', startText);
+	setTimeout(function() {
+		map.setZoom(startZoom)
+	}, 2 * 1000);    
     }
 };
 
@@ -160,11 +167,14 @@ forward.onclick = function() {
 	num += 1;
 //	alert(num);  
 	if(num > 2) throw "too low";   
-	changeStory('story', storyText[num]); // change the story (function)
+	changeStory(position[num], 'story', storyText[num]); // change the story (function)
    } catch(err) { // If this was the last story do the same, but show the start styry and start again.
 	fadeOut(document.getElementById('story')),
 	num = -1,
-	changeStory('story', startText);
+	changeStory(startCoordinate, 'story', startText);
+	   setTimeout(function() {
+		map.setZoom(startZoom)
+	}, 2 * 1000);
    }
 };
 
