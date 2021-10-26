@@ -31,7 +31,7 @@ map.removeLayer(googleSat);
 //	}).addTo(map);
 
 var cartoLight = L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png", {
-  maxZoom: 19,
+  maxZoom: 20,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions">CartoDB</a>'
   }).addTo(map);
 
@@ -116,7 +116,7 @@ function fadeIn(element) {
 }
 function changeStory(position, id, content) {
 	fadeOut(document.getElementById(id)), // Fade out function
-		map.flyTo(position, 18, { // Pan map to new location
+		map.flyTo(position, 20, { // Pan map to new location
 		animate:true,
 		duration:2
 	});
