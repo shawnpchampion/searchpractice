@@ -2,7 +2,7 @@ let map = L.map('mymap').setView([19.40746666, -154.9114795], 16);
 let ourData = [];
 
 window.onload = function() {
-	changeStory('story', startText);
+	changeStory(startCoordinate, 'story', startText);
 //	alert(num); //	 Show start story when page has loaded
 };
 
@@ -118,7 +118,7 @@ function changeStory(position, id, content) {
 	fadeOut(document.getElementById(id)), // Fade out function
 		map.flyTo(position, 18, { // Pan map to new location
 		animate:true,
-		duration:panTime
+		duration:2
 	});
 	setTimeout(function() { // Wait for a number of miliseconds and then fade in the new story.
 		 
