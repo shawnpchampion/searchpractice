@@ -43,11 +43,7 @@ var cartoLight = L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net
 //    zoomOffset: -1
 //}).addTo(map);
 
-//let iconOption = {
-//    iconUrl: './assets/location-marker.svg',
-//    iconSize: [30, 30]
-//};
-//let ourCustomIcon = L.icon(iconOption);
+
 
 fetch("./assets/location-data.json")
     .then(response => response.json())
@@ -59,7 +55,13 @@ fetch("./assets/location-data.json")
             option.text = data[i].title;
    //         document.querySelector(".select-dropdown").appendChild(option);
 
-            let marker = L.marker([data[i].latitude, data[i].longitude])
+	let iconOption = {
+    iconUrl: 'data[i].marker',
+    iconSize: [30, 30]
+};
+let ourCustomIcon = L.icon(iconOption);	
+		
+            let marker = L.marker([data[i].latitude, data[i].longitude], {icon: ourCustomIcon} )
 	    .bindPopup(`<h3> ${data[i].title} </h3> <p> ${data[i].description} </p>`)
 	    .on('click', () => {
                 map.flyTo([data[i].latitude, data[i].longitude], data[i].zoomLevel, {
