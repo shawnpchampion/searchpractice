@@ -116,10 +116,12 @@ function fadeIn(element) {
 }
 function changeStory(position, id, content) {
 	fadeOut(document.getElementById(id)), // Fade out function
-	setTimeout(function() { // Wait for a number of miliseconds and then fade in the new story.
-		 map.flyTo(position, 18, { // Pan map to new location
+		map.flyTo(position, 18, { // Pan map to new location
 		animate:true,
 		duration:panTime
+	});
+	setTimeout(function() { // Wait for a number of miliseconds and then fade in the new story.
+		 
 		document.getElementById(id).innerHTML = content
 		fadeIn(document.getElementById(id))
 	}, 650);
