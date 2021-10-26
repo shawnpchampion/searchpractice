@@ -16,13 +16,13 @@ var satmap = document.getElementById('sat-map-btn');
 
 satmap.onclick = function() {
 map.addLayer(googleSat);
-});
+};
 
 var streetmap = document.getElementById('street-map-btn'); 
 
 streetmap.onclick = function() {
 map.removeLayer(googleSat);
-});
+};
 
 		
 //var roads = L.gridLayer
