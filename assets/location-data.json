@@ -6,7 +6,7 @@
         "latitude": 19.40956456,
         "longitude": -154.9139812,
         "title": "1",
-	"icon": "./assets/location-marker.svg"    
+	"marker": "./assets/location-marker.svg"    
         "description": "India’s most famous and widely recognized building, it is situated in the eastern part of the city on the southern (right) bank of the Yamuna River.",
         "zoomLevel": 19
     },
@@ -14,7 +14,7 @@
         "latitude": 19.40998394,
         "longitude": -154.9142794,
         "title": "2",
-	    "icon": "./assets/location-marker.svg"
+	    "marker": "./assets/location-marker.svg"
         "description": "Gateway of India has stayed an inseparable historic symbol for the city of Mumbai and the country. This bold basalt arch that symbolizes colonial triumph is now amongst the popular tourist places to visit in Mumbai.",
         "zoomLevel": 19
     },
@@ -22,7 +22,7 @@
         "latitude": 19.40851575,
         "longitude": -154.9126613,
         "title": "3",
-	    "icon": "./assets/location-marker.svg"
+	    "marker": "./assets/location-marker.svg"
         "description": "One of the most attention-grabbing places in India would be Ajanta and Ellora Caves. Ajanta Caves can mostly be referred as the Buddhist caves whereas Ellora Caves can be called Hindu, Jain and Buddhist caves. Ajanta & Ellora Caves are amongst one of the most well-preserved monuments in India.",
         "zoomLevel": 19
     },
