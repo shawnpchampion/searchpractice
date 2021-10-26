@@ -1,4 +1,4 @@
-let map = L.map('mymap').setView([19.40746666, -154.9114795], 16);
+let map = L.map('mymap').setView([19.40746666, -154.9114795], 18);
 let ourData = [];
 
 window.onload = function() {
@@ -60,18 +60,20 @@ fetch("./assets/location-data.json")
     iconSize: [30, 30]
 };
 let ourCustomIcon = L.icon(iconOption);	
-		
+	var positionn = [];	
             let marker = L.marker([data[i].latitude, data[i].longitude], {icon: ourCustomIcon} )
-	    .bindPopup(`<h3> ${data[i].title} </h3> <p> ${data[i].description} </p>`)
+//	    .bindPopup(`<h3> ${data[i].title} </h3> <p> ${data[i].description} </p>`)
 	    .on('click', () => {
                 map.flyTo([data[i].latitude, data[i].longitude], data[i].zoomLevel, {
             animate: true,
             duration: 2 // in seconds
                 });
-                changeStory('story', `<h3> ${data[i].title} </h3> <p> ${data[i].description} </p>`); 
+  //              changeStory('story', `<h3> ${data[i].title} </h3> <p> ${data[i].description} </p>`); 
                 
-	    })
+	     })
 	    .addTo(map);
+		
+	     positionn.push([data[i].latitude, data[i].longitude]);
         }
     })
     .catch(error => alert(error))
@@ -114,9 +116,9 @@ function fadeIn(element) {
         op += 0.04; // this row and the next sets the speed of the fade-in
     }, 20);
 }
-function changeStory(position, id, content) {
+function changeStory(positionn, id, content) {
 	fadeOut(document.getElementById(id)), // Fade out function
-		map.flyTo(position, 20, { // Pan map to new location
+		map.flyTo(positionn, 20, { // Pan map to new location
 		animate:true,
 		duration:2
 	});
@@ -150,7 +152,7 @@ rewind.onclick = function() {
 	num -= 1;
 //	alert(num); 
 	if(num < -1) throw "too high";    
-	changeStory(position[num],'story', storyText[num]); // change the story (function)
+	changeStory(positionn[num],'story', storyText[num]); // change the story (function)
     } catch(err) { // If it was the first story do the same, but show the start story again.
 	num = -1,	
 	changeStory(startCoordinate, 'story', startText);
@@ -169,7 +171,7 @@ forward.onclick = function() {
 	num += 1;
 //	alert(num);  
 	if(num > 2) throw "too low";   
-	changeStory(position[num], 'story', storyText[num]); // change the story (function)
+	changeStory(positionn[num], 'story', storyText[num]); // change the story (function)
    } catch(err) { // If this was the last story do the same, but show the start styry and start again.
 	fadeOut(document.getElementById('story')),
 	num = -1,
