@@ -3,7 +3,7 @@ let ourData = [];
 
 window.onload = function() {
 	changeStory(startCoordinate, 'story', startText);
-//	alert(num); //	 Show start story when page has loaded
+	alert(num); //	 Show start story when page has loaded
 };
 
 var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
@@ -43,7 +43,7 @@ var cartoLight = L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net
 //    zoomOffset: -1
 //}).addTo(map);
 
-
+var positionn = [];
 
 fetch("./assets/location-data.json")
     .then(response => response.json())
@@ -59,8 +59,7 @@ fetch("./assets/location-data.json")
     iconUrl: data[i].mark,
     iconSize: [30, 30]
 };
-let ourCustomIcon = L.icon(iconOption);	
-	var positionn = [];	
+let ourCustomIcon = L.icon(iconOption);		
             let marker = L.marker([data[i].latitude, data[i].longitude], {icon: ourCustomIcon} )
 //	    .bindPopup(`<h3> ${data[i].title} </h3> <p> ${data[i].description} </p>`)
 	    .on('click', () => {
@@ -150,7 +149,7 @@ var rewind = document.getElementById('rewind'); // A separate function for stepp
 rewind.onclick = function() {
     try {	
 	num -= 1;
-//	alert(num); 
+	alert(num); 
 	if(num < -1) throw "too high";    
 	changeStory(positionn[num],'story', storyText[num]); // change the story (function)
     } catch(err) { // If it was the first story do the same, but show the start story again.
