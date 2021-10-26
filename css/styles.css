@@ -34,6 +34,30 @@ body {
 		cursor:pointer;
 		cursor:hand;
 	}
+#satmap {
+		font-size:1vw;
+		font-family:Arial;
+		font-weight:bolder;
+		opacity:0.6;
+		position:absolute;
+		z-index:4;
+		top:7%;
+		left:14%;
+		cursor:pointer;
+		cursor:hand;
+	}
+#streetmap {
+		font-size:1vw;
+		font-family:Arial;
+		font-weight:bolder;
+		opacity:0.6;
+		position:absolute;
+		z-index:4;
+		top:17%;
+		left:14%;
+		cursor:pointer;
+		cursor:hand;
+	}
 #mymap {
 		width:100%; 
 		height:70%;
