@@ -34,7 +34,7 @@ body {
 		cursor:pointer;
 		cursor:hand;
 	}
-#satmap {
+#sat-map-btn {
 		font-size:1vw;
 		font-family:Arial;
 		font-weight:bolder;
@@ -46,7 +46,7 @@ body {
 		cursor:pointer;
 		cursor:hand;
 	}
-#streetmap {
+#street-map-btn {
 		font-size:1vw;
 		font-family:Arial;
 		font-weight:bolder;
