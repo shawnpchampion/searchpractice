@@ -12,15 +12,18 @@ var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
   });
 
 
+var satmap = document.getElementById('sat-map-btn'); 
 
-$("#sat-map-btn").click(function(event) {
+satmap.onclick = function() {
 map.addLayer(googleSat);
 });
 
+var streetmap = document.getElementById('street-map-btn'); 
 
-$("#street-map-btn").click(function() {
-    	map.removeLayer(googleSat);
+streetmap.onclick = function() {
+map.removeLayer(googleSat);
 });
+
 		
 //var roads = L.gridLayer
 //	.googleMutant({
