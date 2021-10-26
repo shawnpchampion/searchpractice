@@ -82,9 +82,9 @@ body {
 		z-index:1;
         bottom: 0;
 	overflow:auto;
-	background-image: url("https://shawnpchampion.github.io/searchpractice/img/13179.jpg");
+/*	background-image: url("https://shawnpchampion.github.io/searchpractice/img/13179.jpg");
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: contain; */
 	}
 
 .button-group {
