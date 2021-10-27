@@ -1,4 +1,4 @@
-let map = L.map('mymap').setView([19.40746666, -154.9114795], 20);
+let map = L.map('mymap').setView([19.40746666, -154.9114795], 16);
 
 let ourData = [];
 
@@ -145,6 +145,9 @@ var num = -1;
 
 window.onload = function() {
 	changeStory(startCoordinate, 'story', startText);
+	setTimeout(function() {
+		map.setZoom(startZoom)
+	}, 6);
 //	alert(num); //	 Show start story when page has loaded
 };
 
@@ -180,7 +183,7 @@ forward.onclick = function() {
 	changeStory(startCoordinate, 'story', startText);
 	   setTimeout(function() {
 		map.setZoom(startZoom)
-	}, 2);
+	}, 6);
    }
 };
 
