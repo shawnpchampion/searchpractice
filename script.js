@@ -2,10 +2,7 @@ let map = L.map('mymap').setView([19.40746666, -154.9114795], 16);
 
 let ourData = [];
 
-window.onload = function() {
-	changeStory(startCoordinate, 'story', startText);
-	alert(num); //	 Show start story when page has loaded
-};
+
 
 var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
   maxZoom: 20,
@@ -145,6 +142,11 @@ document.getElementById('forward').style.color = storyTextColor;
 
 
 var num = -1;
+
+window.onload = function() {
+	changeStory(startCoordinate, 'story', startText);
+//	alert(num); //	 Show start story when page has loaded
+};
 
 var rewind = document.getElementById('rewind'); // A separate function for stepping backwards in the story
 rewind.onclick = function() {
