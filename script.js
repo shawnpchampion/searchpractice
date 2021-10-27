@@ -73,7 +73,7 @@ let ourCustomIcon = L.icon(iconOption);
 	     positionn.push([data[i].latitude, data[i].longitude]);
         }
     })
-    .catch(error => alert(error))
+ //   .catch(error => alert(error))
 
 //document.querySelector(".map-zoom-out-btn").addEventListener('click', () => {
 //    map.flyTo([19.40746666, -154.9114795], 15);	
