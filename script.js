@@ -183,7 +183,7 @@ forward.onclick = function() {
 	changeStory(startCoordinate, 'story', startText);
 	   setTimeout(function() {
 		map.setZoom(startZoom)
-	}, 6);
+	}, 1000);
    }
 };
 
