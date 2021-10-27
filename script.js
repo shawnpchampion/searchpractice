@@ -181,9 +181,10 @@ forward.onclick = function() {
 	fadeOut(document.getElementById('story')),
 	num = -1,
 	changeStory(startCoordinate, 'story', startText);
-	   setTimeout(function() {
-		map.setZoom(startZoom)
-	}, 1000);
+	   	map.setZoom(startZoom);
+//	   setTimeout(function() {
+//		map.setZoom(startZoom)
+//	}, 2 * 1000);
    }
 };
 
