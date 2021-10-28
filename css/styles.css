@@ -16,8 +16,8 @@ body {
 		font-weight:bolder;
 		opacity:0.6;
 		position:absolute;
-		z-index:3;
-		bottom:3%;
+		z-index:999;
+		bottom:0%;
 		left:4%;
 		cursor:pointer;
 		cursor:hand;
@@ -28,9 +28,9 @@ body {
 		font-weight:bolder;
 		opacity:0.6;
 		position:absolute;
-		z-index:4;
-		bottom:7%;
-		right:4%;
+		z-index:999;
+		bottom:0%;
+		left:9%;
 		cursor:pointer;
 		cursor:hand;
 	}
@@ -40,9 +40,9 @@ body {
 		font-weight:bolder;
 		opacity:0.6;
 		position:absolute;
-		z-index:4;
-		bottom:10%;
-		right:4%;
+		z-index:999;
+		bottom:0%;
+		left:19%;
 		cursor:pointer;
 		cursor:hand;
 	}
@@ -52,9 +52,9 @@ body {
 		font-weight:bolder;
 		opacity:0.6;
 		position:absolute;
-		z-index:4;
-		bottom:13%;
-		right:4%;
+		z-index:999;
+		bottom:0%;
+		left:27%;
 		cursor:pointer;
 		cursor:hand;
 	}
