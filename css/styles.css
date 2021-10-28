@@ -18,7 +18,7 @@ body {
 		position:absolute;
 		z-index:3;
 		bottom:3%;
-		right:4%;
+		left:4%;
 		cursor:pointer;
 		cursor:hand;
 	}
@@ -65,7 +65,7 @@ body {
 		z-index:0;
 		top:0;
 		left:0;
-	        z-index: 0;
+	     
 	
 /*    width: 90vw;
     height: 70vh;
@@ -85,7 +85,8 @@ body {
 	}
 #story {
 	float: left;
-	padding: 10px;
+	padding-left: 3%;
+        padding-right: 3%;
 }
 
 .button-group {
