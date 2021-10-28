@@ -54,8 +54,8 @@ fetch("./assets/location-data.json")
    //         document.querySelector(".select-dropdown").appendChild(option);
 
 	let iconOption = {
-    iconUrl: data[i].mark
-//    iconSize: [30, 30]
+    iconUrl: data[i].mark;
+    iconSize: [30, 30]
 };
 let ourCustomIcon = L.icon(iconOption);		
             let marker = L.marker([data[i].latitude, data[i].longitude], {icon: ourCustomIcon} )
