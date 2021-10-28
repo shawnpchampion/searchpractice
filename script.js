@@ -94,7 +94,7 @@ function fadeIn(element) {
 }
 function changeStory(positionn, id, content) {
 	fadeOut(document.getElementById(id)), // Fade out function
-		map.flyTo(positionn, 17, { // Pan map to new location
+		map.flyTo(positionn, 18, { // Pan map to new location
 		animate:true,
 		duration:2
 	});
