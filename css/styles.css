@@ -86,6 +86,10 @@ body {
         background-repeat: no-repeat;
         background-size: contain; */
 	}
+#storyt {
+	float: left;
+	padding: 10px;
+}
 
 .button-group {
     justify-content: space-evenly !important;
