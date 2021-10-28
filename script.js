@@ -23,23 +23,13 @@ map.removeLayer(googleSat);
 };
 
 		
-//var roads = L.gridLayer
-//	.googleMutant({
-//		type: "satellite", // valid values are 'roadmap', 'satellite', 'terrain' and 'hybrid'
-//	}).addTo(map);
 
 var cartoLight = L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png", {
   maxZoom: 20,
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions">CartoDB</a>'
   }).addTo(map);
 
-//L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//    attribution: '&copy; OpenStreetMap contributors',
-//    maxZoom: 20,
-//    minZoom: 2,
-//    tileSize: 512,
-//    zoomOffset: -1
-//}).addTo(map);
+
 
 var positionn = [];
 
@@ -75,20 +65,9 @@ let ourCustomIcon = L.icon(iconOption);
     })
  //   .catch(error => alert(error))
 
-//document.querySelector(".map-zoom-out-btn").addEventListener('click', () => {
-//    map.flyTo([19.40746666, -154.9114795], 15);	
-//});
 
-//document.querySelector(".search-btn").addEventListener('click', () => {
-//    let select = document.querySelector(".select-dropdown");
-//    let value = select.options[select.selectedIndex].value;
-//    map.flyTo([ourData[value-1].latitude, ourData[value-1].longitude], ourData[value-1].zoomLevel, {
-//            animate: true,
-//            duration: 2 // in seconds
-//                }
-             
-//             );
-//});
+
+
 
 
 // Javascript to create a storymap by Klas Karlsson 2014-05-29
@@ -115,7 +94,7 @@ function fadeIn(element) {
 }
 function changeStory(positionn, id, content) {
 	fadeOut(document.getElementById(id)), // Fade out function
-		map.flyTo(positionn, 20, { // Pan map to new location
+		map.flyTo(positionn, 17, { // Pan map to new location
 		animate:true,
 		duration:2
 	});
