@@ -1,4 +1,4 @@
-let map = L.map('mymap').setView([19.40746666, -154.9114795], 16);
+let map = L.map('mymap', {attributionControl: false}).setView([19.40746666, -154.9114795], 16);
 
 let ourData = [];
 
