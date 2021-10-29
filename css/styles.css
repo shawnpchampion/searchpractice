@@ -42,7 +42,7 @@ body {
 		position:absolute;
 		z-index:999;
 		bottom:0%;
-		left:19%;
+		right:19%;
 		cursor:pointer;
 		cursor:hand;
 	}
@@ -54,7 +54,7 @@ body {
 		position:absolute;
 		z-index:999;
 		bottom:0%;
-		left:27%;
+		right:27%;
 		cursor:pointer;
 		cursor:hand;
 	}
