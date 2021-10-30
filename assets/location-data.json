@@ -14,7 +14,7 @@
         "latitude": 19.40998394,
         "longitude": -154.9142794,
         "title": "2",
-	    "mark": "./assets/blackpin.png",
+	    "mark": "./assets/avopin.png",
         "description": "Gateway of India has stayed an inseparable historic symbol for the city of Mumbai and the country. This bold basalt arch that symbolizes colonial triumph is now amongst the popular tourist places to visit in Mumbai.",
         "zoomLevel": 19
     },
@@ -22,7 +22,7 @@
         "latitude": 19.40851575,
         "longitude": -154.9126613,
         "title": "3",
-	    "mark": "./assets/blackpin.png",
+	    "mark": "./assets/banpin.png",
         "description": "One of the most attention-grabbing places in India would be Ajanta and Ellora Caves. Ajanta Caves can mostly be referred as the Buddhist caves whereas Ellora Caves can be called Hindu, Jain and Buddhist caves. Ajanta & Ellora Caves are amongst one of the most well-preserved monuments in India.",
         "zoomLevel": 19
     },
